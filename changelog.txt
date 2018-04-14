@@ -1,2 +1,91 @@
-wa
-lol
+Changelog:
+\nv1.8.9 (Zeus Advanced)
+\nMajor Bug Fixes!
+\n
+\nv1.8.8 (Zeus Advanced)
+\nMajor Bug Fixes!
+\n
+\nv1.8.7 (Zeus Advanced)
+\nFull Lua Wrapper
+\n
+\nv1.8.3
+\nAdded Flame Exploit (As theme)
+\nAdded More Commands
+\nAdded getObjects Support
+\n
+\nv1.8.2
+\nAdded Template V2 Theme
+\nAdded Load Url text 
+\nAdded Explorer
+\nAdded ToolBox
+\n
+\nv1.7.9
+\nAdded Photon (Theme)
+\nAdded 774 (Theme/Exploit)
+\nAdded Lua Scripts in ListBox
+\nAdded LuaC Scripts in ListBox
+\nAdded More Quick Lua Exe
+\nFixed Quick Exe TopMost
+\nFixed Bugs
+\nFixed Encryption
+\nFixed Injection
+\nFixed "Attach Zeus.dll" error
+\nFaster Injection
+\nAdding Win7 support!
+\n
+\nv1.7.8
+\nAdded Zeus Magic (In Quick Exe Lua)
+\nAdded Lua Quick Exe
+\nAdded ChatHook
+\nFixed Bugs
+\nFixed Ultra UI
+\nChanged Default UI
+\nReset Whitelist (Safety Reasons)
+\nBugs fixed in Click To TP
+\nAdded Secure Whitelist
+\nAdded Whitelist check
+\n
+\nv1.7.7
+\nAdded 4+ Themes
+\nRelocated Memehax to Settings Tab
+\nAdded Execution Stability
+\nFixed Multiple Bugs
+\nCleaned Coding
+\nContinuing TRIAL
+\n
+\nv1.7.6
+\nTRIAL RELEASED
+\nUNPATCHED
+\n
+\nv1.7
+\nAdded more Lua Enviroments
+\nBleu now working
+\nAdded Themes
+\nSupported Lua Scripts to Folder
+\nFixed Crash
+\nClose Main UI when opening ULTRA
+\nAdded Rainbow Theme
+\nFixed support problem with windows 7
+\n
+\nv1.6
+\nAdded more Commands
+\nEdits in UI
+\nFixed "OOF" Error
+\nFixed Btools Command
+\nFixed Crash
+\nAdded Back Memehax
+\nUpatched Memehax
+\n
+\nv1.5.1
+\nAdded Secure whitelisting
+\nUpdated Patch
+\n
+\nv1.5
+\nAdded memehax exploit
+\nUpdated Lua Environment
+\nAdded compatibility for win7+
+\nAdded more Quick Exe
+\nFixed Click to Tp
+\nFixed New UI
+\nFixed Crashing
+\nFixed unnecessary Injection Failed  
