@@ -393,7 +393,7 @@
           { 
             if (XMLHttpRequestObject.readyState == 4 && 
               XMLHttpRequestObject.status == 200) { 
-                var a = XMLHttpRequestObject.responseText.replace(/\n/g, "<br>"); 
+                var a = XMLHttpRequestObject.responseText;
 	        document.getElementsByClassName("changelog")[0].innerHTML = a;
             } 
           }; 
