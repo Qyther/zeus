@@ -346,8 +346,41 @@
   if (window.location.hostname != "zeusexploit.netlify.com") return;
 	  
 	  
+	  
 	  var XMLHttpRequestObject = false; 
+	  var XMLHttpRequestObject0 = false;
 
+	  if (window.XMLHttpRequest) {
+        XMLHttpRequestObject0 = new XMLHttpRequest();
+      } else if (window.ActiveXObject) {
+        XMLHttpRequestObject0 = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+        if(XMLHttpRequestObject0) {
+          XMLHttpRequestObject0.open("GET", "https://zeusexploit.netlify.com/changelog.txt"); 
+
+          XMLHttpRequestObject0.onreadystatechange = function() 
+          { 
+            if (XMLHttpRequestObject0.readyState == 4 && 
+              XMLHttpRequestObject0.status == 200) { 
+                var a = XMLHttpRequestObject0.responseText.replace(/\n/g, "<br>"); 
+	        document.getElementsByClassName("changelog")[0].innerHTML = a;
+            } 
+          }; 
+          
+          XMLHttpRequestObject0.open("GET", "https://zeusexploit.netlify.com/version.txt"); 
+
+          XMLHttpRequestObject0.onreadystatechange = function() 
+          { 
+            if (XMLHttpRequestObject0.readyState == 4 && 
+              XMLHttpRequestObject0.status == 200) { 
+                var b = XMLHttpRequestObject0.responseText; 
+				document.getElementsByClassName("currentversion")[0].innerHTML = "Current Version v" + b + "<br/>NOTE: Buy before using or it wont work!<br/><br/>(Click the download logo to download latest version)";
+            } 
+          }; 
+
+          XMLHttpRequestObject0.send(null); 
+        }
+	  
       if (window.XMLHttpRequest) {
         XMLHttpRequestObject = new XMLHttpRequest();
       } else if (window.ActiveXObject) {
@@ -365,16 +398,7 @@
             } 
           }; 
           
-          XMLHttpRequestObject.open("GET", "https://zeusexploit.netlify.com/version.txt"); 
-
-          XMLHttpRequestObject.onreadystatechange = function() 
-          { 
-            if (XMLHttpRequestObject.readyState == 4 && 
-              XMLHttpRequestObject.status == 200) { 
-                var b = XMLHttpRequestObject.responseText; 
-				document.getElementsByClassName("currentversion")[0].innerHTML = "Current Version v" + b + "<br/>NOTE: Buy before using or it wont work!<br/><br/>(Click the download logo to download latest version)";
-            } 
-          }; 
+          
 
           XMLHttpRequestObject.send(null); 
         }
