@@ -62,17 +62,19 @@
   
   <div class=downloadpage>
     
-    
-    
+    <h1 class=header0>Download! (Zeus Advanced Trial!)</h1>
+    <div class=downloadbutton></div>
+    <p class=currentversion>Current Version V1.8.9<br/>NOTE: Buy before using or it wont work!<br/><br/>(Click the download logo to download latest version)</p>
+    <p class=changelogannounce>Changelog:</p>
+    <p class=changelog>Added sheets</p>
   </div>
   
   
-  <div class=divider>
     <p class=credits>Website made by Qyther</p>
-  </div>
   
 </body>
 </html>
+
 
 
 <style>
@@ -102,6 +104,7 @@
   position: fixed;
   background-image: url("https://raw.githubusercontent.com/Qyther/zeus/master/home.png");
   background-size: 2.2vw 5vh;
+  cursor: pointer;
 }
 
 .download {
@@ -112,6 +115,7 @@
   position: fixed;
   background-image: url("https://raw.githubusercontent.com/Qyther/zeus/master/download.png");
   background-size: 2.5vw 5vh;
+  cursor: pointer;
 }
 
 .buy {
@@ -122,6 +126,7 @@
   position: fixed;
   background-image: url("https://raw.githubusercontent.com/Qyther/zeus/master/purchase.png");
   background-size: 2.5vw 5vh;
+  cursor: pointer;
 }
 
 .discord {
@@ -132,6 +137,7 @@
   position: fixed;
   background-image: url("https://raw.githubusercontent.com/Qyther/zeus/master/discord.png");
   background-size: 2.3vw 5vh;
+  cursor: pointer;
 }
 
 .zeus {
@@ -142,6 +148,7 @@
   position: fixed;
   background-image: url("https://raw.githubusercontent.com/Qyther/zeus/master/zues.png");
   background-size: 4.3vw 7vh;
+  cursor: pointer;
 }
 
 .bugfix {
@@ -152,6 +159,7 @@
   position: fixed;
   background-image: url("https://raw.githubusercontent.com/Qyther/zeus/master/bugfix.png");
   background-size: 2.5vw 5vh;
+  cursor: pointer;
 }
 
 .buttons {
@@ -256,15 +264,6 @@
   text-align: center;
 }
 
-.divider {
-  width: calc(100% - 11px);
-  height: 10vw;
-  position: absolute;
-  top: 150vh;
-  left: 2.13vw;
-  background: #333;
-  border: 1px solid white;
-}
 
 .credits {
   width: 100%;
@@ -272,15 +271,65 @@
   text-align: center;
   color: white;
   font-family: monospace;
-  font-size: 3vw;
-  top: 0.3vw;
+  font-size: 2vw;
+  top: -10px;
 }
 
 .homepage {
   display: none;
 }
-</style>
 
+.header0 {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  font-size: 3vw;
+  font-family: monospace;
+  color: #ddd;
+  top: 2vw;
+}
+
+.downloadbutton {
+  width: 15vw;
+  height: 15vw;
+  background-size: cover;
+  background-image: url("https://raw.githubusercontent.com/Qyther/zeus/master/downloadbutton.png");
+  position: absolute;
+  left: 42.5%;
+  top: 13vw;
+  cursor: pointer;
+}
+
+.currentversion {
+  color: #ddd;
+  font-size: 2vw;
+  position: absolute;
+  font-family: monospace;
+  width: 100%;
+  text-align: center;
+  top: 28vw;
+}
+
+.changelogannounce {
+  width: 100%;
+  position: absolute;
+  color: #ddd;
+  font-family: monospace;
+  top: 45vw;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.changelog {
+  width: 100%;
+  position: absolute;
+  color: #ddd;
+  font-family: monospace;
+  top: 50vw;
+  text-align: center;
+  font-size: 2vw
+}
+</style>
 <script>
   window.onload = function() {
   
@@ -314,7 +363,18 @@
                 var a = XMLHttpRequestObject.responseText.replace(/\n/g, "<br>"); 
 				console.log(a);
             } 
-          } 
+          }; 
+          
+          XMLHttpRequestObject.open("GET", "https://zeusexploit.netlify.com/version.txt"); 
+
+          XMLHttpRequestObject.onreadystatechange = function() 
+          { 
+            if (XMLHttpRequestObject.readyState == 4 && 
+              XMLHttpRequestObject.status == 200) { 
+                var b = XMLHttpRequestObject.responseText; 
+				document.getElementsByClassName("currentversion")[0].innerHTML = "Current Version v" + b + "<br/>NOTE: Buy before using or it wont work!<br/><br/>(Click the download logo to download latest version)";
+            } 
+          }; 
 
           XMLHttpRequestObject.send(null); 
         }
@@ -324,6 +384,4 @@
 function hide() {
   document.getElementsByClassName("homepage")[0].style.display = "none";
 }
-  
-
 </script>
