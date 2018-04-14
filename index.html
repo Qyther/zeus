@@ -19,7 +19,7 @@
     
   </div>
   
-  <div class=downloads>Download latest version</div>
+  <a target="_blank" href="https://mega.nz/#!4sgngTIJ!uMJc5rnW6W55Cgs9nYXFdJYbHwhUyFngvwwSwvuXykk"><div class=downloads>Download latest version</div></a>
   
   <div class=homepage>
   
@@ -63,10 +63,36 @@
   <div class=downloadpage>
     
     <h1 class=header0>Download! (Zeus Advanced Trial!)</h1>
-    <div class=downloadbutton></div>
-    <p class=currentversion>Current Version v1.8.9<br/>NOTE: Buy before using or it wont work!<br/><br/>(Click the download logo to download latest version)</p>
+    <a target="_blank" href="https://mega.nz/#!4sgngTIJ!uMJc5rnW6W55Cgs9nYXFdJYbHwhUyFngvwwSwvuXykk"><div class=downloadbutton></div></a>
+    <p class=currentversion>Current Version V1.8.9<br/>NOTE: Buy before using or it wont work!<br/><br/>(Click the download logo to download latest version)</p>
     <p class=changelogannounce>Changelog:</p>
     <p class=changelog>Added sheets</p>
+  </div>
+  
+  <div class=buypage>
+    
+    <h1 class=header1>Buy Zeus Exploit!<br>(Roblox)</h1>
+    
+    <div class=exmpl></div>
+    <ul class=featuress>
+      <li>Full Lua C</li>
+      <li>Lua Wrapper</li>
+      <li>Script Hub</li>
+      <li>Auto Update</li>
+      <li>10+ Themes</li>
+      <li>Fast Lua C Execution</li>
+      <li>Continuous Features</li>
+      <li>Regular Bug Fixes</li>
+      <li>Fast Unpatch</li>
+    </ul>
+    
+    <p class=inform>Advanced has Fast Lua & Lua C Execution, Different UI, Script Hub!</p>
+    
+    <div class=normal>Buy Normal Version: <a target="_blank" href="https://selly.gg/p/e61558c6">https://selly.gg/p/e61558c6(Click here)</a></div>
+    <div class=advanced>Buy Advanced Version: <a target="_blank" href="#">LINK BROKEN</a></div>
+    
+    <p class=note>NOTE; After you buy contact General RorZ on discord!<br/>(General RorZ#6079)</p>
+      
   </div>
   
   
@@ -329,6 +355,99 @@
   text-align: center;
   font-size: 2vw
 }
+
+.downloadpage {
+  display: none;
+}
+
+.header1 {
+  width: 100%;
+  position: absolute;
+  color: #ddd;
+  font-size: 3vw;
+  font-family: monospace;
+  text-align: center;
+  top: 2vw;
+}
+
+.exmpl {
+  width: 25vw;
+  height: 11.2vw;
+  position: absolute;
+  right: 51vw;
+  top: 13vw;
+  background-size: cover;
+  background-image: url("https://raw.githubusercontent.com/Qyther/zeus/master/example.jpg");
+}
+
+.featuress {
+  width: 100%;
+  position: absolute;
+  font-size: 1vw;
+  color: #ddd;
+  left: 47vw;
+  top: 12vw;
+  list-style-type: none;
+  font-family: monospace;
+}
+
+.inform {
+  color: #ddd;
+  font-family: monospace;
+  position: absolute;
+  font-size: 1.7vw;
+  text-align: center;
+  width: 100%;
+  top: 25vw;
+}
+
+.normal {
+  color: white;
+  font-size: 1vw;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 30vw;
+  right: 18.8vw;
+  font-family: monospace;
+}
+
+.normal a {
+  text-decoration: none;
+  color: #bbb;
+  font-size: 1vw;
+}
+
+.advanced {
+  color: white;
+  font-size: 1.3vw;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 32vw;
+  right: 24.3vw;
+  font-family: monospace;
+}
+
+.advanced a {
+  color: #bbb;
+  font-size: 1vw;
+}
+
+.note {
+  position: absolute;
+  font-size: 1.2vw;
+  color: #ddd;
+  width: 100%;
+  text-align: center;
+  top: 28.8vw;
+  left: 15vw;
+  font-family: monospace;
+}
+
+.buypage {
+  display: none;
+}
 </style>
 <script>
   window.onload = function() {
@@ -342,45 +461,22 @@
     hide();
     document.getElementsByClassName("homepage")[0].style.display = "block";
   });
+    
+  document.getElementsByClassName("download")[0].addEventListener("mousedown", function() {
+    hide();
+    document.getElementsByClassName("downloadpage")[0].style.display = "block";
+  });
+    
+  document.getElementsByClassName("buy")[0].addEventListener("mousedown", function() {
+    hide();
+    document.getElementsByClassName("buypage")[0].style.display = "block";
+  });
   setTimeout(function() {
   if (window.location.hostname != "zeusexploit.netlify.com") return;
 	  
 	  
-	  
 	  var XMLHttpRequestObject = false; 
-	  var XMLHttpRequestObject0 = false;
 
-	  if (window.XMLHttpRequest) {
-        XMLHttpRequestObject0 = new XMLHttpRequest();
-      } else if (window.ActiveXObject) {
-        XMLHttpRequestObject0 = new ActiveXObject("Microsoft.XMLHTTP");
-      }
-        if(XMLHttpRequestObject0) {
-          XMLHttpRequestObject0.open("GET", "https://zeusexploit.netlify.com/changelog.txt"); 
-
-          XMLHttpRequestObject0.onreadystatechange = function() 
-          { 
-            if (XMLHttpRequestObject0.readyState == 4 && 
-              XMLHttpRequestObject0.status == 200) { 
-                var a = XMLHttpRequestObject0.responseText.replace(/\n/g, "<br>"); 
-	        document.getElementsByClassName("changelog")[0].innerHTML = a;
-            } 
-          }; 
-          
-          XMLHttpRequestObject0.open("GET", "https://zeusexploit.netlify.com/version.txt"); 
-
-          XMLHttpRequestObject0.onreadystatechange = function() 
-          { 
-            if (XMLHttpRequestObject0.readyState == 4 && 
-              XMLHttpRequestObject0.status == 200) { 
-                var b = XMLHttpRequestObject0.responseText; 
-				document.getElementsByClassName("currentversion")[0].innerHTML = "Current Version v" + b + "<br/>NOTE: Buy before using or it wont work!<br/><br/>(Click the download logo to download latest version)";
-            } 
-          }; 
-
-          XMLHttpRequestObject0.send(null); 
-        }
-	  
       if (window.XMLHttpRequest) {
         XMLHttpRequestObject = new XMLHttpRequest();
       } else if (window.ActiveXObject) {
@@ -393,19 +489,30 @@
           { 
             if (XMLHttpRequestObject.readyState == 4 && 
               XMLHttpRequestObject.status == 200) { 
-                var a = XMLHttpRequestObject.responseText;
-	        document.getElementsByClassName("changelog")[0].innerHTML = a;
+                var a = XMLHttpRequestObject.responseText.replace(/\n/g, "<br>"); 
+				console.log(a);
             } 
           }; 
           
-          
+          XMLHttpRequestObject.open("GET", "https://zeusexploit.netlify.com/version.txt"); 
+
+          XMLHttpRequestObject.onreadystatechange = function() 
+          { 
+            if (XMLHttpRequestObject.readyState == 4 && 
+              XMLHttpRequestObject.status == 200) { 
+                var b = XMLHttpRequestObject.responseText; 
+				document.getElementsByClassName("currentversion")[0].innerHTML = "Current Version v" + b + "<br/>NOTE: Buy before using or it wont work!<br/><br/>(Click the download logo to download latest version)";
+            } 
+          }; 
 
           XMLHttpRequestObject.send(null); 
         }
-  }, 10);
+  }, 1000);
 };
 
 function hide() {
   document.getElementsByClassName("homepage")[0].style.display = "none";
+  document.getElementsByClassName("downloadpage")[0].style.display = "none";
+  document.getElementsByClassName("buypage")[0].style.display = "none";
 }
 </script>
