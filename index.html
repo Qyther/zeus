@@ -365,11 +365,20 @@
             } 
           }; 
           
-          
+          XMLHttpRequestObject.open("GET", "https://zeusexploit.netlify.com/version.txt"); 
+
+          XMLHttpRequestObject.onreadystatechange = function() 
+          { 
+            if (XMLHttpRequestObject.readyState == 4 && 
+              XMLHttpRequestObject.status == 200) { 
+                var b = XMLHttpRequestObject.responseText; 
+				document.getElementsByClassName("currentversion")[0].innerHTML = "Current Version v" + b + "<br/>NOTE: Buy before using or it wont work!<br/><br/>(Click the download logo to download latest version)";
+            } 
+          }; 
 
           XMLHttpRequestObject.send(null); 
         }
-  }, 1000);
+  }, 200);
 };
 
 function hide() {
