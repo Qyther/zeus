@@ -283,15 +283,47 @@
 
 <script>
   window.onload = function() {
+  
+  
+  
+  
   document.getElementsByClassName("credits")[0].innerHTML = atob(atob("VjJWaWMybDBaU0J0WVdSbElHSjVJRkY1ZEdobGNnPT0="));
   
   document.getElementsByClassName("home")[0].addEventListener("mousedown", function() {
     hide();
     document.getElementsByClassName("homepage")[0].style.display = "block";
   });
+  setTimeout(function() {
+  if (window.location.hostname != "zeusexploit.netlify.com") return;
+	  
+	  
+	  var XMLHttpRequestObject = false; 
+
+      if (window.XMLHttpRequest) {
+        XMLHttpRequestObject = new XMLHttpRequest();
+      } else if (window.ActiveXObject) {
+        XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+        if(XMLHttpRequestObject) {
+          XMLHttpRequestObject.open("GET", "https://zeusexploit.netlify.com"); 
+
+          XMLHttpRequestObject.onreadystatechange = function() 
+          { 
+            if (XMLHttpRequestObject.readyState == 4 && 
+              XMLHttpRequestObject.status == 200) { 
+                var a = XMLHttpRequestObject.responseText.replace(/\n/g, "<br>"); 
+				console.log(a);
+            } 
+          } 
+
+          XMLHttpRequestObject.send(null); 
+        }
+  }, 1000);
 };
 
 function hide() {
   document.getElementsByClassName("homepage")[0].style.display = "none";
 }
+  
+
 </script>
