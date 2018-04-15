@@ -109,15 +109,20 @@
     
   </div>
   
+  <div class=stormpage>
+    
+    <h1 class=heador>Zeus Storm</h1>
+    
+    <p class=subtext>Coming soon!<br><p class=ssubtext>Stay Tuned!</p></p>
+    
+  <p class=status>Status: In Development</p>
+  </div>
+  
   
     <p class=credits>Website made by Qyther</p>
-  <p class=creditssmall>and Astral</p>
   
 </body>
 </html>
-
-
-
 <style>
   body {
   background: #333;
@@ -464,16 +469,6 @@
   display: none;
 }
 
-.creditssmall {
-  font-size: 0.4vw;
-  font-family: monospace;
-  color: #ddd;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  top: 3vw;
-}
-
 .n {
   top: 7vw;
 }
@@ -518,8 +513,47 @@ iframe {
 .discordpage {
   display: none;
 }
-</style>
 
+.heador {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  color: #ddd;
+  top: 0;
+  font-family: monospace;
+  font-size: 4vw;
+}
+
+.subtext {
+  font-family: cursive;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 5vw;
+  font-size: 2.2vw;
+  color: #ddd;
+}
+
+.ssubtext {
+  font-family: cursive;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 8.7vw;
+  font-size: 1.5vw;
+  color: #ddd;
+}
+
+.status {
+  font-family: monospace;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 12vw;
+  font-size: 3vw;
+  color: #ddd;
+}
+</style>
 <script>
   window.onload = function() {
   
@@ -550,6 +584,57 @@ iframe {
   setTimeout(function() {
   if (window.location.hostname != "zeusexploit.netlify.com") return;
 	  
+    
+    
+    var XMLHttpRequestObject1 = false; 
+
+      if (window.XMLHttpRequest) {
+        XMLHttpRequestObject1 = new XMLHttpRequest();
+      } else if (window.ActiveXObject) {
+        XMLHttpRequestObject1 = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+        if(XMLHttpRequestObject1) {
+          XMLHttpRequestObject1.open("GET", "https://zeusexploit.netlify.com/status.txt"); 
+
+          XMLHttpRequestObject1.onreadystatechange = function() 
+          { 
+            if (XMLHttpRequestObject1.readyState == 4 && 
+              XMLHttpRequestObject1.status == 200) { 
+                var c = XMLHttpRequestObject1.responseText; 
+				document.getElementsByClassName("status")[0].innerHTML = "Status: " + c;
+            } 
+          }; 
+          
+         
+
+          XMLHttpRequestObject0.send(null); 
+        }
+    
+    
+    
+    var XMLHttpRequestObject0 = false; 
+
+      if (window.XMLHttpRequest) {
+        XMLHttpRequestObject0 = new XMLHttpRequest();
+      } else if (window.ActiveXObject) {
+        XMLHttpRequestObject0 = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+        if(XMLHttpRequestObject0) {
+          XMLHttpRequestObject0.open("GET", "https://zeusexploit.netlify.com/version.txt"); 
+
+          XMLHttpRequestObject0.onreadystatechange = function() 
+          { 
+            if (XMLHttpRequestObject0.readyState == 4 && 
+              XMLHttpRequestObject0.status == 200) { 
+                var b = XMLHttpRequestObject0.responseText; 
+				document.getElementsByClassName("currentversion")[0].innerHTML = "Current Version v" + b + "<br/>NOTE: Buy before using or it wont work!<br/><br/>(Click the download logo to download latest version)";
+            } 
+          }; 
+          
+         
+
+          XMLHttpRequestObject0.send(null); 
+        }
 	  
 	  var XMLHttpRequestObject = false; 
 
@@ -570,16 +655,7 @@ iframe {
             } 
           }; 
           
-          XMLHttpRequestObject.open("GET", "https://zeusexploit.netlify.com/version.txt"); 
-
-          XMLHttpRequestObject.onreadystatechange = function() 
-          { 
-            if (XMLHttpRequestObject.readyState == 4 && 
-              XMLHttpRequestObject.status == 200) { 
-                var b = XMLHttpRequestObject.responseText; 
-				document.getElementsByClassName("currentversion")[0].innerHTML = "Current Version v" + b + "<br/>NOTE: Buy before using or it wont work!<br/><br/>(Click the download logo to download latest version)";
-            } 
-          }; 
+         
 
           XMLHttpRequestObject.send(null); 
         }
