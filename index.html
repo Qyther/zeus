@@ -7,6 +7,7 @@
   <div class=sidebar>
     
     <div class=buttons>
+    
       
     <div class=home></div>
     <div class=download></div>
@@ -14,9 +15,15 @@
     <div class=discord></div>
     <div class=zeus></div>
     <div class=bugfix></div>
+    <div class=buttonho></div>
+    <div class=buttondo></div>
+    <div class=buttonbu></div>
+    <div class=buttondi></div>
+    <div class=buttonze></div>
+    <div class=buttonbf></div>
       
     </div>
-    
+    <div class=logow>Z<br/>e<br/>u<br/>s<br/></div>
   </div>
   
   <a target="_blank" href="https://mega.nz/#!4sgngTIJ!uMJc5rnW6W55Cgs9nYXFdJYbHwhUyFngvwwSwvuXykk"><div class=downloads>Download latest version</div></a>
@@ -116,6 +123,11 @@
     <p class=subtext>Coming soon!<br><p class=ssubtext>Stay Tuned!</p></p>
     
   <p class=status>Status: In Development</p>
+  </div>
+  
+  <div class=bugfixespage>
+    <h1 class=heador>Bug Fixes!</h1>
+    <p class=subtext>Coming Soon!</p>
   </div>
   
   
@@ -322,7 +334,6 @@
 }
 
 .homepage {
-  display: none;
 }
 
 .header0 {
@@ -553,6 +564,94 @@ iframe {
   font-size: 3vw;
   color: #ddd;
 }
+
+.stormpage {
+  display: none;
+}
+
+.buttonho {
+  width: 2.75vw;
+  height: 5.4vh;
+  background: red;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.buttondo {
+  width: 2.75vw;
+  height: 5.2vh;
+  background: red;
+  position: absolute;
+  top: calc(5% + 18px);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.buttondo {
+  width: 2.75vw;
+  height: 5.2vh;
+  background: red;
+  position: absolute;
+  top: calc(5% + 18px);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.buttonbu {
+  width: 2.75vw;
+  height: 5.2vh;
+  background: red;
+  position: absolute;
+  top: calc(10% + 34px);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.buttondi {
+  width: 2.75vw;
+  height: 5.2vh;
+  background: red;
+  position: absolute;
+  top: calc(15% + 50px);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.buttonze {
+  width: 2.75vw;
+  height: 5.2vh;
+  background: red;
+  position: absolute;
+  top: calc(20% + 66px);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.buttonbf {
+  width: 2.75vw;
+  height: 5.2vh;
+  background: red;
+  position: absolute;
+  top: calc(25% + 78px);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.bugfixespage {
+  display: none;
+}
+
+.logow {
+  position: absolute;
+  width: 2.7vw;
+  color: #ddd;
+  top: 55vh;
+  font-size: 4vw;
+  text-align: center;
+  font-family: monospace;
+  line-height: 3.5vw;
+}
 </style>
 <script>
   window.onload = function() {
@@ -562,25 +661,36 @@ iframe {
   
   document.getElementsByClassName("credits")[0].innerHTML = atob(atob("VjJWaWMybDBaU0J0WVdSbElHSjVJRkY1ZEdobGNnPT0="));
   
-  document.getElementsByClassName("home")[0].addEventListener("mousedown", function() {
+  document.getElementsByClassName("buttonho")[0].addEventListener("mousedown", function() {
     hide();
     document.getElementsByClassName("homepage")[0].style.display = "block";
   });
     
-  document.getElementsByClassName("download")[0].addEventListener("mousedown", function() {
+  document.getElementsByClassName("buttondo")[0].addEventListener("mousedown", function() {
     hide();
     document.getElementsByClassName("downloadpage")[0].style.display = "block";
   });
     
-  document.getElementsByClassName("buy")[0].addEventListener("mousedown", function() {
+  document.getElementsByClassName("buttonbu")[0].addEventListener("mousedown", function() {
     hide();
     document.getElementsByClassName("buypage")[0].style.display = "block";
   });
     
-  document.getElementsByClassName("discord")[0].addEventListener("mousedown", function() {
+  document.getElementsByClassName("buttonze")[0].addEventListener("mousedown", function() {
+    hide();
+    document.getElementsByClassName("stormpage")[0].style.display = "block";
+  });
+    
+  document.getElementsByClassName("buttondi")[0].addEventListener("mousedown", function() {
     hide();
     document.getElementsByClassName("discordpage")[0].style.display = "block";
   });
+    
+  document.getElementsByClassName("buttonbf")[0].addEventListener("mousedown", function() {
+    hide();
+    document.getElementsByClassName("bugfixespage")[0].style.display = "block";
+  });
+    
   setTimeout(function() {
   if (window.location.hostname != "zeusexploit.netlify.com") return;
 	  
@@ -607,7 +717,7 @@ iframe {
           
          
 
-          XMLHttpRequestObject1.send(null); 
+          XMLHttpRequestObject0.send(null); 
         }
     
     
@@ -650,8 +760,8 @@ iframe {
           { 
             if (XMLHttpRequestObject.readyState == 4 && 
               XMLHttpRequestObject.status == 200) { 
-                var a = XMLHttpRequestObject.responseText; 
-				document.getElementsByClassName("changelog")[0].innerHTML = a;
+                var a = XMLHttpRequestObject.responseText.replace(/\n/g, "<br>"); 
+				console.log(a);
             } 
           }; 
           
@@ -667,5 +777,7 @@ function hide() {
   document.getElementsByClassName("downloadpage")[0].style.display = "none";
   document.getElementsByClassName("buypage")[0].style.display = "none";
   document.getElementsByClassName("discordpage")[0].style.display = "none";
+  document.getElementsByClassName("stormpage")[0].style.display = "none";
+  document.getElementsByClassName("bugfixespage")[0].style.display = "none";
 }
 </script>
